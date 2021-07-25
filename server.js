@@ -14,7 +14,7 @@ const connectDB = require('./DB/index');
 
 app.use(cors());
 app.use(express.json())
-app.route('/api', router);
+app.use('/api', router);
 
 //Connect DB
 connectDB();
