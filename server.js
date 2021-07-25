@@ -17,7 +17,7 @@ app.use(cors());
 app.use(express.json())
 app.use('/api', router);
 
-app.get('/', (req, res)=> {return res.send("hellow world")})
+app.get('/', (req, res)=> {return res.send("<h1>Bienvenido!</h1><br><h2>Puedes encontrar la documentación de uso en esta ruta /api/documentation </h2>")})
 
 const server = app.listen(port, '0.0.0.0', (req, res) => {
     console.log('Alive & listening at port: '+port);

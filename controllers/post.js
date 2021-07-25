@@ -58,6 +58,12 @@ const getOnePost = async (req, res) => {
         
         //Get post, and populate updated name of the author
         const post = await postModel.findById(post_id).populate('user', 'name')
+
+        //Check for post's existence
+        if(!post){
+            return res.status(404).json({'errorMessage': 'Post not found'})
+        }
+        
         res.status(200).json(post);
 
     } catch (error) {
@@ -86,6 +92,10 @@ const updatePost = async (req, res) => {
         //Get post, and populate updated name of the author
         let post = await postModel.findById(post_id)
 
+        //Check posts existence
+        if(!post){
+            return res.status(404).json({'errorMessage': 'Post not found'})
+        }
         //Check if user owns the post
 
         let ownership = await post.checkOwnership(req.user._id)

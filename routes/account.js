@@ -2,8 +2,10 @@ const express = require('express')
 const router = express.Router();
 //Middleware
 const accountValidator = require("../middleware/validators/account")
+const {authMiddleware} = require("../middleware/auth")
+
 //Controllers
-const {createAccount} = require("../controllers/account")
+const {createAccount, updateAccount, deleteAccount, getAccounts} = require("../controllers/account")
 
 
 
@@ -11,9 +13,16 @@ const {createAccount} = require("../controllers/account")
 //Post account
 router.post('/', accountValidator, createAccount)
 
-router.get('/', (req, res) => {
-    console.log('arrived here')
-    return res.status(200).json('Hello there')
-})
+//Private end point
+//Update account
+router.put('/', authMiddleware, accountValidator, updateAccount)
+
+//Pirvate end point
+//Delete account
+router.delete('/', authMiddleware, deleteAccount)
+
+//Public route
+//Get peoples accounts, just names, protects PI
+router.get('/', getAccounts)
 
 module.exports = router;
