@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
+require('dotenv').config();
 
 async function connectDB(){
-
     try {
 
         //Attempt connection
@@ -15,6 +15,7 @@ async function connectDB(){
         }).catch(e => {
             //Connection error
             console.log('db connection failed')
+            console.log(e)
             
         }); 
     } catch (error) {
