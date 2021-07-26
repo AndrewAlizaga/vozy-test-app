@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 12,
-    "tests": 12,
-    "passes": 12,
+    "suites": 14,
+    "tests": 14,
+    "passes": 14,
     "pending": 0,
     "failures": 0,
-    "start": "2021-07-25T21:56:44.806Z",
-    "end": "2021-07-25T21:56:48.852Z",
-    "duration": 4046,
-    "testsRegistered": 12,
+    "start": "2021-07-26T02:00:54.136Z",
+    "end": "2021-07-26T02:01:01.697Z",
+    "duration": 7561,
+    "testsRegistered": 14,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "7fcd672e-91e2-460c-b211-70708724c986",
+      "uuid": "2c720565-9809-47c9-be37-2e77ff8b3c99",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ac3ad835-73a4-432f-abc6-09bbe52beebf",
+          "uuid": "5e812804-50bf-4681-9912-a6d0d8649f0b",
           "title": "Post User",
           "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\accountTest.js",
           "file": "\\accountTest.js",
@@ -36,7 +36,7 @@
               "title": "\"before each\" hook in \"Post User\"",
               "fullTitle": "Post User \"before each\" hook in \"Post User\"",
               "timedOut": false,
-              "duration": 498,
+              "duration": 1093,
               "state": null,
               "speed": null,
               "pass": false,
@@ -45,8 +45,8 @@
               "context": null,
               "code": "server = require('../../server.js');",
               "err": {},
-              "uuid": "e1156089-8241-42d7-abb8-106cbdcbace9",
-              "parentUUID": "ac3ad835-73a4-432f-abc6-09bbe52beebf",
+              "uuid": "f47a8d8e-5ed3-4de0-a6d3-5ebf403b05f4",
+              "parentUUID": "5e812804-50bf-4681-9912-a6d0d8649f0b",
               "isHook": true,
               "skipped": false
             }
@@ -65,8 +65,8 @@
               "context": null,
               "code": "server.close();",
               "err": {},
-              "uuid": "aa36745f-e9e8-4e95-bec1-becba12d4316",
-              "parentUUID": "ac3ad835-73a4-432f-abc6-09bbe52beebf",
+              "uuid": "04ea7efa-59b2-4f0c-83ca-7cfc4f12591e",
+              "parentUUID": "5e812804-50bf-4681-9912-a6d0d8649f0b",
               "isHook": true,
               "skipped": false
             }
@@ -76,35 +76,35 @@
               "title": "responds to /api/account",
               "fullTitle": "Post User responds to /api/account",
               "timedOut": false,
-              "duration": 1421,
+              "duration": 1742,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "this.timeout(3000)\n    request(server)\n      .post('/api/account')\n      .send({ 'name': 'Test User', 'password': 'qwerty' })\n      .expect(200)\n      .end(function (err, res) {\n        if (err) return done(err);\n        return done();\n      });",
+              "code": "console.log('post user test')\nthis.timeout(5000)\nrequest(server)\n  .post('/api/account')\n  .send({ 'name': 'Test User', 'password': 'qwerty' })\n  .expect(200)\n  .end(function (err, res) {\n    if (err) return done(err);\n    return done();\n  });",
               "err": {},
-              "uuid": "c801fcee-9e0b-4874-bfeb-5af62ab657c2",
-              "parentUUID": "ac3ad835-73a4-432f-abc6-09bbe52beebf",
+              "uuid": "767916ac-f230-4607-8fd1-bf7220312a6f",
+              "parentUUID": "5e812804-50bf-4681-9912-a6d0d8649f0b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c801fcee-9e0b-4874-bfeb-5af62ab657c2"
+            "767916ac-f230-4607-8fd1-bf7220312a6f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1421,
+          "duration": 1742,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "971fa367-e28a-49ae-b02c-64fdb44c168d",
+          "uuid": "9c4c5398-3bac-4adc-aed7-cde5cc1dfbd5",
           "title": "Authenticate user",
           "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\accountTest.js",
           "file": "\\accountTest.js",
@@ -120,10 +120,10 @@
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "server = require('../../server.js');",
+              "code": "server = require('../../server.js');\n    //Get loged in",
               "err": {},
-              "uuid": "11bdcbf1-a021-4276-8747-79f563031dd0",
-              "parentUUID": "971fa367-e28a-49ae-b02c-64fdb44c168d",
+              "uuid": "960bfd10-9d38-4bb6-b57c-ef0af8d2fb60",
+              "parentUUID": "9c4c5398-3bac-4adc-aed7-cde5cc1dfbd5",
               "isHook": true,
               "skipped": false
             }
@@ -142,8 +142,8 @@
               "context": null,
               "code": "server.close();",
               "err": {},
-              "uuid": "969e2034-9293-40b3-9791-add60fc017c6",
-              "parentUUID": "971fa367-e28a-49ae-b02c-64fdb44c168d",
+              "uuid": "2f18defa-f84b-45ec-a229-8941634cf105",
+              "parentUUID": "9c4c5398-3bac-4adc-aed7-cde5cc1dfbd5",
               "isHook": true,
               "skipped": false
             }
@@ -153,35 +153,35 @@
               "title": "responds to /api/auth",
               "fullTitle": "Authenticate user responds to /api/auth",
               "timedOut": false,
-              "duration": 105,
+              "duration": 242,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "this.timeout(3000)\n    request(server)\n      .post('/api/auth')\n      .auth('Test User', 'qwerty')\n      .expect(200)\n      .expect('Content-Type', /json/)\n      .end(function (err, res) {\n        \n        if (err) {\n          console.log(err)\n          return done(err);\n        }\n        console.log(res.body)\n        token = res.body.token;\n        return done();\n      });",
+              "code": "console.log('Autheticating')\n    this.timeout(5000)\n    request(server)\n      .post('/api/auth')\n      .auth('Test User', 'qwerty')\n      .expect(200)\n      .expect('Content-Type', /json/)\n      .end(function (err, res) {\n        \n        if (err) {\n          console.log(err)\n          return done(err);\n        }\n        console.log(res.body)\n        console.log('token assigned')\n        token = res.body.token;\n        return done();\n      });",
               "err": {},
-              "uuid": "573b3513-a706-4194-8bce-915f61693056",
-              "parentUUID": "971fa367-e28a-49ae-b02c-64fdb44c168d",
+              "uuid": "b28c00ba-d1e9-4d37-8cae-7acce6c4c3a8",
+              "parentUUID": "9c4c5398-3bac-4adc-aed7-cde5cc1dfbd5",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "573b3513-a706-4194-8bce-915f61693056"
+            "b28c00ba-d1e9-4d37-8cae-7acce6c4c3a8"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 105,
+          "duration": 242,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "57e0a1d6-b14c-4791-be54-413659e52926",
+          "uuid": "2ec5ff9c-8221-468e-8a46-ff415befe014",
           "title": "Update account",
           "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\accountTest.js",
           "file": "\\accountTest.js",
@@ -199,8 +199,8 @@
               "context": null,
               "code": "server = require('../../server.js');",
               "err": {},
-              "uuid": "6a33dc4e-13b1-465d-a190-6538dace24e7",
-              "parentUUID": "57e0a1d6-b14c-4791-be54-413659e52926",
+              "uuid": "8af67029-9984-4b7c-aa9e-f82327f1a287",
+              "parentUUID": "2ec5ff9c-8221-468e-8a46-ff415befe014",
               "isHook": true,
               "skipped": false
             }
@@ -219,8 +219,8 @@
               "context": null,
               "code": "server.close();",
               "err": {},
-              "uuid": "1425f434-41b4-4864-9ae3-59ba20fb38bf",
-              "parentUUID": "57e0a1d6-b14c-4791-be54-413659e52926",
+              "uuid": "db3d462c-9aae-4749-b5b0-cd6c95caa7c6",
+              "parentUUID": "2ec5ff9c-8221-468e-8a46-ff415befe014",
               "isHook": true,
               "skipped": false
             }
@@ -230,7 +230,7 @@
               "title": "responds to /api/account",
               "fullTitle": "Update account responds to /api/account",
               "timedOut": false,
-              "duration": 299,
+              "duration": 566,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -239,26 +239,26 @@
               "context": null,
               "code": "this.timeout(3000)\n    request(server)\n      .put('/api/account')\n      .set({'Authorization': `Bearer ${token}`})\n      .send({'name': 'Test User New Name!', 'password': 'qwerty'})\n      .expect(200)\n      .expect('Content-Type', /json/)\n      .end(function (err, res) {\n        if (err) return done(err);\n        return done();\n      });",
               "err": {},
-              "uuid": "80b7b6b8-3979-4174-bbe0-2bf8a84a3ee2",
-              "parentUUID": "57e0a1d6-b14c-4791-be54-413659e52926",
+              "uuid": "dc30c485-0705-47f1-80ac-5c9cd3879ef9",
+              "parentUUID": "2ec5ff9c-8221-468e-8a46-ff415befe014",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "80b7b6b8-3979-4174-bbe0-2bf8a84a3ee2"
+            "dc30c485-0705-47f1-80ac-5c9cd3879ef9"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 299,
+          "duration": 566,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "776754cb-34b8-4f09-87a5-5dd667b5b74d",
+          "uuid": "ad606099-e8a3-4289-9f54-f94928fc69bb",
           "title": "Delete Account",
           "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\accountTest.js",
           "file": "\\accountTest.js",
@@ -276,8 +276,8 @@
               "context": null,
               "code": "server = require('../../server.js');",
               "err": {},
-              "uuid": "41418bcd-2490-4ec4-b1a5-3d2d5327902d",
-              "parentUUID": "776754cb-34b8-4f09-87a5-5dd667b5b74d",
+              "uuid": "cbd624c0-f397-4b6e-9a30-693478437b8b",
+              "parentUUID": "ad606099-e8a3-4289-9f54-f94928fc69bb",
               "isHook": true,
               "skipped": false
             }
@@ -287,7 +287,7 @@
               "title": "\"after each\" hook in \"Delete Account\"",
               "fullTitle": "Delete Account \"after each\" hook in \"Delete Account\"",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": null,
               "speed": null,
               "pass": false,
@@ -296,8 +296,8 @@
               "context": null,
               "code": "server.close();",
               "err": {},
-              "uuid": "172cc038-9104-4551-86f9-dea301f53402",
-              "parentUUID": "776754cb-34b8-4f09-87a5-5dd667b5b74d",
+              "uuid": "30b5340c-b7a7-4519-9bcb-50d461f156bc",
+              "parentUUID": "ad606099-e8a3-4289-9f54-f94928fc69bb",
               "isHook": true,
               "skipped": false
             }
@@ -307,7 +307,7 @@
               "title": "responds to /api/account",
               "fullTitle": "Delete Account responds to /api/account",
               "timedOut": false,
-              "duration": 283,
+              "duration": 515,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -316,26 +316,26 @@
               "context": null,
               "code": "this.timeout(3000)\n  request(server)\n    .delete('/api/account/')\n    .expect(200)\n    .set({'Authorization': `Bearer ${token}`})\n    .expect('Content-Type', /json/)\n    .end(function(err, res) {\n    \n      if (err) {\n        console.log(err)\n        return done(err);\n      }\n      console.log(res.body)\n      return done();\n    });",
               "err": {},
-              "uuid": "f19f58d8-ec4c-473c-b334-da61647bdf0d",
-              "parentUUID": "776754cb-34b8-4f09-87a5-5dd667b5b74d",
+              "uuid": "b3f9975b-61ea-4ca1-90db-b24fc8a73743",
+              "parentUUID": "ad606099-e8a3-4289-9f54-f94928fc69bb",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "f19f58d8-ec4c-473c-b334-da61647bdf0d"
+            "b3f9975b-61ea-4ca1-90db-b24fc8a73743"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 283,
+          "duration": 515,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "b7e8a6e7-7f80-4358-837f-84f03c0fc1f1",
+          "uuid": "dbd0e380-8ad9-44bf-93df-5c6e580f32fc",
           "title": "Get Accounts",
           "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\accountTest.js",
           "file": "\\accountTest.js",
@@ -353,8 +353,8 @@
               "context": null,
               "code": "server = require('../../server.js');",
               "err": {},
-              "uuid": "9f5bdd18-6a70-4861-9ed3-7d440da37a24",
-              "parentUUID": "b7e8a6e7-7f80-4358-837f-84f03c0fc1f1",
+              "uuid": "7195e2e4-3880-448e-bf0f-9fa24b955fd8",
+              "parentUUID": "dbd0e380-8ad9-44bf-93df-5c6e580f32fc",
               "isHook": true,
               "skipped": false
             }
@@ -373,8 +373,8 @@
               "context": null,
               "code": "server.close();",
               "err": {},
-              "uuid": "a7019eb7-4e93-4530-8937-5c54eb3ff196",
-              "parentUUID": "b7e8a6e7-7f80-4358-837f-84f03c0fc1f1",
+              "uuid": "bb0a25e0-ca68-4b25-aa7d-fd8ed3d9fce9",
+              "parentUUID": "dbd0e380-8ad9-44bf-93df-5c6e580f32fc",
               "isHook": true,
               "skipped": false
             }
@@ -384,7 +384,7 @@
               "title": "responds to /api/account",
               "fullTitle": "Get Accounts responds to /api/account",
               "timedOut": false,
-              "duration": 106,
+              "duration": 181,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -393,26 +393,26 @@
               "context": null,
               "code": "request(server)\n  .get('/api/account')\n  .expect(200)\n  .expect('Content-Type', /json/)\n  .end(function(err, res) {\n    \n    if (err) {\n      console.log(err)\n      return done(err);\n    }\n    return done();\n  });",
               "err": {},
-              "uuid": "b8984ac0-fe69-44d1-a81f-9992570d09b7",
-              "parentUUID": "b7e8a6e7-7f80-4358-837f-84f03c0fc1f1",
+              "uuid": "3f87da24-01eb-4b31-b27f-8ed71ea3dc1a",
+              "parentUUID": "dbd0e380-8ad9-44bf-93df-5c6e580f32fc",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b8984ac0-fe69-44d1-a81f-9992570d09b7"
+            "3f87da24-01eb-4b31-b27f-8ed71ea3dc1a"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 106,
+          "duration": 181,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "6502eaa8-1561-47c9-87a0-4511e0e10195",
+          "uuid": "aefb1a3d-60e5-462f-ab20-d799e0f10af2",
           "title": "Documentation Redirectioning",
           "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\documentationTest.js",
           "file": "\\documentationTest.js",
@@ -421,7 +421,7 @@
               "title": "\"before each\" hook in \"Documentation Redirectioning\"",
               "fullTitle": "Documentation Redirectioning \"before each\" hook in \"Documentation Redirectioning\"",
               "timedOut": false,
-              "duration": 0,
+              "duration": 1,
               "state": null,
               "speed": null,
               "pass": false,
@@ -430,8 +430,8 @@
               "context": null,
               "code": "server = require('../../server.js');",
               "err": {},
-              "uuid": "ec8ec222-c22a-4eb6-8670-cfecdb62e579",
-              "parentUUID": "6502eaa8-1561-47c9-87a0-4511e0e10195",
+              "uuid": "dba045c8-e796-4d93-83f9-3c3d5096e6e4",
+              "parentUUID": "aefb1a3d-60e5-462f-ab20-d799e0f10af2",
               "isHook": true,
               "skipped": false
             }
@@ -450,8 +450,8 @@
               "context": null,
               "code": "server.close();",
               "err": {},
-              "uuid": "7147f7bf-eac8-4a24-adbc-5e5e8304ca07",
-              "parentUUID": "6502eaa8-1561-47c9-87a0-4511e0e10195",
+              "uuid": "93627582-4c1e-41c7-9eee-479c0d49e293",
+              "parentUUID": "aefb1a3d-60e5-462f-ab20-d799e0f10af2",
               "isHook": true,
               "skipped": false
             }
@@ -461,7 +461,7 @@
               "title": "responds to /api/documentation",
               "fullTitle": "Documentation Redirectioning responds to /api/documentation",
               "timedOut": false,
-              "duration": 5,
+              "duration": 13,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -470,26 +470,103 @@
               "context": null,
               "code": "this.timeout(3000)\n    request(server)\n      .get('/api/documentation')\n      .expect(302)\n      .end(function (err, res) {\n        if (err) return done(err);\n        return done();\n      });",
               "err": {},
-              "uuid": "3a631bc9-8b36-4cf1-8222-b000ad14954f",
-              "parentUUID": "6502eaa8-1561-47c9-87a0-4511e0e10195",
+              "uuid": "70e333bc-1e81-4d86-a4d1-e5e3fa3b77ca",
+              "parentUUID": "aefb1a3d-60e5-462f-ab20-d799e0f10af2",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3a631bc9-8b36-4cf1-8222-b000ad14954f"
+            "70e333bc-1e81-4d86-a4d1-e5e3fa3b77ca"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 5,
+          "duration": 13,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "0e257def-68a5-4238-9d43-3ec6d616b89c",
+          "uuid": "f0f137fb-e15a-4809-a7b2-d66343278d74",
+          "title": "Post User Post token management",
+          "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\postsTest.js",
+          "file": "\\postsTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Post User Post token management\"",
+              "fullTitle": "Post User Post token management \"before each\" hook in \"Post User Post token management\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "server = require('../../server.js');",
+              "err": {},
+              "uuid": "ea471ea4-ac65-4a0a-ba6c-4ad87a1ca486",
+              "parentUUID": "f0f137fb-e15a-4809-a7b2-d66343278d74",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Post User Post token management\"",
+              "fullTitle": "Post User Post token management \"after each\" hook in \"Post User Post token management\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "server.close();",
+              "err": {},
+              "uuid": "1b21a55d-c601-49d4-bc49-26ab274d05b9",
+              "parentUUID": "f0f137fb-e15a-4809-a7b2-d66343278d74",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "responds to /api/account",
+              "fullTitle": "Post User Post token management responds to /api/account",
+              "timedOut": false,
+              "duration": 312,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('post user test')\nthis.timeout(5000)\nrequest(server)\n  .post('/api/account')\n  .send({ 'name': 'Test User', 'password': 'qwerty' })\n  .expect(200)\n  .end(function (err, res) {\n    if (err) return done(err);\n    return done();\n  });",
+              "err": {},
+              "uuid": "9664021c-1e61-4cad-a7a2-2118b03c45fe",
+              "parentUUID": "f0f137fb-e15a-4809-a7b2-d66343278d74",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "9664021c-1e61-4cad-a7a2-2118b03c45fe"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 312,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "d9d39497-bc88-4fa6-98f2-c69fe19fd77b",
           "title": "Get Posts",
           "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\postsTest.js",
           "file": "\\postsTest.js",
@@ -507,8 +584,8 @@
               "context": null,
               "code": "server = require('../../server.js');",
               "err": {},
-              "uuid": "71f8ca67-0139-4cb8-b9bc-ca928589a058",
-              "parentUUID": "0e257def-68a5-4238-9d43-3ec6d616b89c",
+              "uuid": "5fb33538-c389-4aba-a8ba-61c41b3e793b",
+              "parentUUID": "d9d39497-bc88-4fa6-98f2-c69fe19fd77b",
               "isHook": true,
               "skipped": false
             }
@@ -518,7 +595,7 @@
               "title": "\"after each\" hook in \"Get Posts\"",
               "fullTitle": "Get Posts \"after each\" hook in \"Get Posts\"",
               "timedOut": false,
-              "duration": 0,
+              "duration": 1,
               "state": null,
               "speed": null,
               "pass": false,
@@ -527,8 +604,8 @@
               "context": null,
               "code": "server.close();",
               "err": {},
-              "uuid": "a4e18446-4637-420d-a375-48edb645121b",
-              "parentUUID": "0e257def-68a5-4238-9d43-3ec6d616b89c",
+              "uuid": "0471f41c-a88c-4560-ab28-00856762057a",
+              "parentUUID": "d9d39497-bc88-4fa6-98f2-c69fe19fd77b",
               "isHook": true,
               "skipped": false
             }
@@ -538,7 +615,7 @@
               "title": "responds to /api/post",
               "fullTitle": "Get Posts responds to /api/post",
               "timedOut": false,
-              "duration": 205,
+              "duration": 158,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -547,26 +624,26 @@
               "context": null,
               "code": "request(server)\n  .get('/api/post')\n  .expect(200)\n  .expect('Content-Type', /json/)\n  .end(function(err, res) {\n    \n    if (err) {\n      console.log(err)\n      return done(err);\n    }\n    return done();\n  });",
               "err": {},
-              "uuid": "35e3af59-0686-480d-a959-f1db8060958c",
-              "parentUUID": "0e257def-68a5-4238-9d43-3ec6d616b89c",
+              "uuid": "d8227971-69da-4b93-a948-40a0a9beeca8",
+              "parentUUID": "d9d39497-bc88-4fa6-98f2-c69fe19fd77b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "35e3af59-0686-480d-a959-f1db8060958c"
+            "d8227971-69da-4b93-a948-40a0a9beeca8"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 205,
+          "duration": 158,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "ee0d54f8-801e-44dc-8d03-3b632a66cb5e",
+          "uuid": "8394e7d5-7f90-4470-984d-5bc872f52cb6",
           "title": "Authenticate user",
           "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\postsTest.js",
           "file": "\\postsTest.js",
@@ -575,7 +652,7 @@
               "title": "\"before each\" hook in \"Authenticate user\"",
               "fullTitle": "Authenticate user \"before each\" hook in \"Authenticate user\"",
               "timedOut": false,
-              "duration": 1,
+              "duration": 0,
               "state": null,
               "speed": null,
               "pass": false,
@@ -584,8 +661,8 @@
               "context": null,
               "code": "server = require('../../server.js');",
               "err": {},
-              "uuid": "a3973e7b-a926-4a46-81f7-1d00d66a3df7",
-              "parentUUID": "ee0d54f8-801e-44dc-8d03-3b632a66cb5e",
+              "uuid": "4180d3c4-24af-4e0f-9e88-fc5f8d1cc2c8",
+              "parentUUID": "8394e7d5-7f90-4470-984d-5bc872f52cb6",
               "isHook": true,
               "skipped": false
             }
@@ -595,7 +672,7 @@
               "title": "\"after each\" hook in \"Authenticate user\"",
               "fullTitle": "Authenticate user \"after each\" hook in \"Authenticate user\"",
               "timedOut": false,
-              "duration": 0,
+              "duration": 1,
               "state": null,
               "speed": null,
               "pass": false,
@@ -604,8 +681,8 @@
               "context": null,
               "code": "server.close();",
               "err": {},
-              "uuid": "a2560aba-e326-4812-9901-7726bcab4498",
-              "parentUUID": "ee0d54f8-801e-44dc-8d03-3b632a66cb5e",
+              "uuid": "6a06ca08-9438-4916-baf4-b242cb09980e",
+              "parentUUID": "8394e7d5-7f90-4470-984d-5bc872f52cb6",
               "isHook": true,
               "skipped": false
             }
@@ -615,35 +692,35 @@
               "title": "responds to /api/auth",
               "fullTitle": "Authenticate user responds to /api/auth",
               "timedOut": false,
-              "duration": 98,
+              "duration": 349,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "this.timeout(3000)\n    request(server)\n      .post('/api/auth')\n      .auth('Test User', 'qwerty')\n      .expect(200)\n      .expect('Content-Type', /json/)\n      .end(function (err, res) {\n        \n        if (err) {\n          console.log(err)\n          return done(err);\n        }\n        console.log(res.body)\n        token = res.body.token;\n        return done();\n      });",
+              "code": "this.timeout(3000)\n    request(server)\n      .post('/api/auth')\n      .auth('Test User', 'qwerty')\n      .expect(200)\n      .expect('Content-Type', /json/)\n      .end(function (err, res) {\n        \n        if (err) {\n          console.log(err)\n          return done(err);\n        }\n        console.log(res.body)\n        token = res.body.token;\n        console.log('token assigned')\n        return done();\n      });",
               "err": {},
-              "uuid": "3db4c441-3776-490e-a006-4a9074acae73",
-              "parentUUID": "ee0d54f8-801e-44dc-8d03-3b632a66cb5e",
+              "uuid": "9bd7a065-9682-4fdf-8043-c08ac49c2514",
+              "parentUUID": "8394e7d5-7f90-4470-984d-5bc872f52cb6",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3db4c441-3776-490e-a006-4a9074acae73"
+            "9bd7a065-9682-4fdf-8043-c08ac49c2514"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 98,
+          "duration": 349,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "471bcb21-089e-4585-a136-4d3272ec53c7",
+          "uuid": "33ca2aa8-d8cc-4cf5-9f82-5de87cc25a5b",
           "title": "Make a Post",
           "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\postsTest.js",
           "file": "\\postsTest.js",
@@ -661,8 +738,8 @@
               "context": null,
               "code": "server = require('../../server.js');",
               "err": {},
-              "uuid": "750be535-3ba2-44b8-9512-cea71fe5eecc",
-              "parentUUID": "471bcb21-089e-4585-a136-4d3272ec53c7",
+              "uuid": "ca7bb341-de3e-4230-aa7e-175e5ae1297d",
+              "parentUUID": "33ca2aa8-d8cc-4cf5-9f82-5de87cc25a5b",
               "isHook": true,
               "skipped": false
             }
@@ -681,8 +758,8 @@
               "context": null,
               "code": "server.close();",
               "err": {},
-              "uuid": "3209a4d1-f0c7-45c4-890d-4da598fb8199",
-              "parentUUID": "471bcb21-089e-4585-a136-4d3272ec53c7",
+              "uuid": "41c326ca-056d-4b2f-80ef-c113f2025236",
+              "parentUUID": "33ca2aa8-d8cc-4cf5-9f82-5de87cc25a5b",
               "isHook": true,
               "skipped": false
             }
@@ -692,7 +769,7 @@
               "title": "responds to /api/post",
               "fullTitle": "Make a Post responds to /api/post",
               "timedOut": false,
-              "duration": 195,
+              "duration": 227,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -701,26 +778,26 @@
               "context": null,
               "code": "this.timeout(3000)\n  request(server)\n    .post('/api/post')\n    .set({'Authorization': `Bearer ${token}`})\n    .send({'title': 'Testing test', 'text': 'This is a text'})\n    .expect(200)\n    .expect('Content-Type', /json/)\n    .end(function(err, res) {\n      \n      if (err) {\n        console.log(err)\n        return done(err);\n      }\n      console.log(res.body)\n      postId = res.body.message._id\n      return done();\n    });",
               "err": {},
-              "uuid": "fab23b00-1d0a-4839-9c2a-45a9fc866263",
-              "parentUUID": "471bcb21-089e-4585-a136-4d3272ec53c7",
+              "uuid": "92f48c75-dfd8-4bc1-88c6-e0069aec7977",
+              "parentUUID": "33ca2aa8-d8cc-4cf5-9f82-5de87cc25a5b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "fab23b00-1d0a-4839-9c2a-45a9fc866263"
+            "92f48c75-dfd8-4bc1-88c6-e0069aec7977"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 195,
+          "duration": 227,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "c2743fa9-d1a1-4ed7-9a01-36520f72ad49",
+          "uuid": "f1eacc5a-8c55-4e15-8b71-f7301864ccf8",
           "title": "Get single Post",
           "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\postsTest.js",
           "file": "\\postsTest.js",
@@ -738,8 +815,8 @@
               "context": null,
               "code": "server = require('../../server.js');",
               "err": {},
-              "uuid": "74ae72b6-7b04-41e6-a72c-df6ab60440e9",
-              "parentUUID": "c2743fa9-d1a1-4ed7-9a01-36520f72ad49",
+              "uuid": "50fef6db-78cd-47a4-a027-9efc3ab6ee8b",
+              "parentUUID": "f1eacc5a-8c55-4e15-8b71-f7301864ccf8",
               "isHook": true,
               "skipped": false
             }
@@ -758,8 +835,8 @@
               "context": null,
               "code": "server.close();",
               "err": {},
-              "uuid": "46fa191b-cdf0-49e1-8851-935e9444a1d6",
-              "parentUUID": "c2743fa9-d1a1-4ed7-9a01-36520f72ad49",
+              "uuid": "2fa30a5a-98b5-4efb-a950-42a182a19528",
+              "parentUUID": "f1eacc5a-8c55-4e15-8b71-f7301864ccf8",
               "isHook": true,
               "skipped": false
             }
@@ -769,7 +846,7 @@
               "title": "responds to /api/post",
               "fullTitle": "Get single Post responds to /api/post",
               "timedOut": false,
-              "duration": 190,
+              "duration": 363,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -778,26 +855,26 @@
               "context": null,
               "code": "this.timeout(3000)\n  request(server)\n    .get('/api/post/'+postId)\n    .expect(200)\n    .expect('Content-Type', /json/)\n    .end(function(err, res) {\n    \n      if (err) {\n        console.log(err)\n        return done(err);\n      }\n      console.log(res.body)\n      return done();\n    });",
               "err": {},
-              "uuid": "986c1bab-bbe6-4b88-9f21-1aa6bb65e2e7",
-              "parentUUID": "c2743fa9-d1a1-4ed7-9a01-36520f72ad49",
+              "uuid": "0dd2d34e-f92b-4baa-8565-f400a82781f6",
+              "parentUUID": "f1eacc5a-8c55-4e15-8b71-f7301864ccf8",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "986c1bab-bbe6-4b88-9f21-1aa6bb65e2e7"
+            "0dd2d34e-f92b-4baa-8565-f400a82781f6"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 190,
+          "duration": 363,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "97b4412d-6d37-4cfa-8761-7ca7f7113c35",
+          "uuid": "e775c07b-773b-4ab5-8ef7-e0da2580347c",
           "title": "Update Post",
           "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\postsTest.js",
           "file": "\\postsTest.js",
@@ -815,8 +892,8 @@
               "context": null,
               "code": "server = require('../../server.js');",
               "err": {},
-              "uuid": "161c72a6-4e0a-41e6-98f7-deebda52c331",
-              "parentUUID": "97b4412d-6d37-4cfa-8761-7ca7f7113c35",
+              "uuid": "443a4795-8083-41a8-9be2-5b2341846fa1",
+              "parentUUID": "e775c07b-773b-4ab5-8ef7-e0da2580347c",
               "isHook": true,
               "skipped": false
             }
@@ -826,7 +903,7 @@
               "title": "\"after each\" hook in \"Update Post\"",
               "fullTitle": "Update Post \"after each\" hook in \"Update Post\"",
               "timedOut": false,
-              "duration": 0,
+              "duration": 1,
               "state": null,
               "speed": null,
               "pass": false,
@@ -835,8 +912,8 @@
               "context": null,
               "code": "server.close();",
               "err": {},
-              "uuid": "f56bd0dd-baa3-42ec-859f-c4f5e3843271",
-              "parentUUID": "97b4412d-6d37-4cfa-8761-7ca7f7113c35",
+              "uuid": "10b44a79-9421-4e50-acef-989ccd9b1099",
+              "parentUUID": "e775c07b-773b-4ab5-8ef7-e0da2580347c",
               "isHook": true,
               "skipped": false
             }
@@ -846,7 +923,7 @@
               "title": "responds to /api/post",
               "fullTitle": "Update Post responds to /api/post",
               "timedOut": false,
-              "duration": 292,
+              "duration": 804,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -855,26 +932,26 @@
               "context": null,
               "code": "this.timeout(3000)\n  request(server)\n    .put('/api/post/'+postId)\n    .expect(200)\n    .set({'Authorization': `Bearer ${token}`})\n    .send({'title': 'Testing test v2', 'text': 'This is an updated text'})\n    .expect('Content-Type', /json/)\n    .end(function(err, res) {\n    \n      if (err) {\n        console.log(err)\n        return done(err);\n      }\n      console.log(res.body)\n      return done();\n    });",
               "err": {},
-              "uuid": "9c6a4e6f-e310-4c65-a93b-5849f6d207d3",
-              "parentUUID": "97b4412d-6d37-4cfa-8761-7ca7f7113c35",
+              "uuid": "b707942e-74d4-4ee9-8dc9-0546d5ea45de",
+              "parentUUID": "e775c07b-773b-4ab5-8ef7-e0da2580347c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9c6a4e6f-e310-4c65-a93b-5849f6d207d3"
+            "b707942e-74d4-4ee9-8dc9-0546d5ea45de"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 292,
+          "duration": 804,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "af14ed41-3e0c-4d89-a9d2-222eb3fcd7d4",
+          "uuid": "37c4f6f5-7a19-485c-8b76-5fb8f0fe5fc3",
           "title": "Delete Post",
           "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\postsTest.js",
           "file": "\\postsTest.js",
@@ -892,8 +969,8 @@
               "context": null,
               "code": "server = require('../../server.js');",
               "err": {},
-              "uuid": "f54ce1e0-8328-430e-9a81-b6babb889083",
-              "parentUUID": "af14ed41-3e0c-4d89-a9d2-222eb3fcd7d4",
+              "uuid": "75ee5674-8429-436f-8b78-80540173f095",
+              "parentUUID": "37c4f6f5-7a19-485c-8b76-5fb8f0fe5fc3",
               "isHook": true,
               "skipped": false
             }
@@ -912,8 +989,8 @@
               "context": null,
               "code": "server.close();",
               "err": {},
-              "uuid": "79f64f08-5afb-409b-8037-4067d584984e",
-              "parentUUID": "af14ed41-3e0c-4d89-a9d2-222eb3fcd7d4",
+              "uuid": "15bae3c0-5570-48a2-91c5-7ea7d4fb8430",
+              "parentUUID": "37c4f6f5-7a19-485c-8b76-5fb8f0fe5fc3",
               "isHook": true,
               "skipped": false
             }
@@ -923,7 +1000,7 @@
               "title": "responds to /api/post",
               "fullTitle": "Delete Post responds to /api/post",
               "timedOut": false,
-              "duration": 320,
+              "duration": 498,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -932,20 +1009,97 @@
               "context": null,
               "code": "this.timeout(3000)\n  request(server)\n    .delete('/api/post/'+postId)\n    .expect(200)\n    .set({'Authorization': `Bearer ${token}`})\n    .expect('Content-Type', /json/)\n    .end(function(err, res) {\n    \n      if (err) {\n        console.log(err)\n        return done(err);\n      }\n      console.log(res.body)\n      return done();\n    });",
               "err": {},
-              "uuid": "b5d7cea8-96e3-40cf-9a98-3b5a3d6b3e54",
-              "parentUUID": "af14ed41-3e0c-4d89-a9d2-222eb3fcd7d4",
+              "uuid": "8f7ab70d-c5bb-4725-870b-8ae4e47efc73",
+              "parentUUID": "37c4f6f5-7a19-485c-8b76-5fb8f0fe5fc3",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b5d7cea8-96e3-40cf-9a98-3b5a3d6b3e54"
+            "8f7ab70d-c5bb-4725-870b-8ae4e47efc73"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 320,
+          "duration": 498,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "13472124-92fa-4b71-8b78-07d97f3bd6b5",
+          "title": "Delete Post Account",
+          "fullFile": "C:\\Users\\andre\\Documents\\test\\app\\unitTests\\API\\postsTest.js",
+          "file": "\\postsTest.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Delete Post Account\"",
+              "fullTitle": "Delete Post Account \"before each\" hook in \"Delete Post Account\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "server = require('../../server.js');",
+              "err": {},
+              "uuid": "54f82282-5a8f-4f40-bcd6-8885530f2a1c",
+              "parentUUID": "13472124-92fa-4b71-8b78-07d97f3bd6b5",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Delete Post Account\"",
+              "fullTitle": "Delete Post Account \"after each\" hook in \"Delete Post Account\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "server.close();",
+              "err": {},
+              "uuid": "115d3cdc-b99c-4c74-9bdd-195de595d513",
+              "parentUUID": "13472124-92fa-4b71-8b78-07d97f3bd6b5",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "responds to /api/account",
+              "fullTitle": "Delete Post Account responds to /api/account",
+              "timedOut": false,
+              "duration": 403,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "this.timeout(3000)\n  request(server)\n    .delete('/api/account/')\n    .expect(200)\n    .set({'Authorization': `Bearer ${token}`})\n    .expect('Content-Type', /json/)\n    .end(function(err, res) {\n    \n      if (err) {\n        console.log(err)\n        return done(err);\n      }\n      console.log(res.body)\n      return done();\n    });",
+              "err": {},
+              "uuid": "fdc3ca31-be86-477d-8f5b-5ddbe0fa9fc1",
+              "parentUUID": "13472124-92fa-4b71-8b78-07d97f3bd6b5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fdc3ca31-be86-477d-8f5b-5ddbe0fa9fc1"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 403,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

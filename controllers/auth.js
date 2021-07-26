@@ -33,6 +33,7 @@ const authenticate = async (req, res) => {
         }
 
         //Check password match
+        console.log('user found...')
         const match = await user.passwordMatch(password)
 
         if(!match)

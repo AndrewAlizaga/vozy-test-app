@@ -12,6 +12,7 @@
     "timestamp": "mmddyyyy_HHMMss"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "cypress": "^8.0.0",
     "dotenv": "^10.0.0",

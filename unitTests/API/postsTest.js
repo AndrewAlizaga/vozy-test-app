@@ -2,6 +2,34 @@ var request = require('supertest');
 let token = '';
 let postId = '';
 
+describe('Post User Post token management', function () {
+  var server;
+  beforeEach(function () {
+
+    server = require('../../server.js');
+
+  });
+  afterEach(function () {
+    server.close();
+  });
+
+  //Create Account
+  it('responds to /api/account', function testSlash(done) {
+    console.log('post user test')
+    this.timeout(5000)
+    request(server)
+      .post('/api/account')
+      .send({ 'name': 'Test User', 'password': 'qwerty' })
+      .expect(200)
+      .end(function (err, res) {
+        if (err) return done(err);
+        return done();
+      });
+
+  });
+
+});
+
 describe('Get Posts', function () {
   var server;
   beforeEach(function () {
@@ -62,6 +90,7 @@ describe('Authenticate user', function (){
 
         console.log(res.body)
         token = res.body.token;
+        console.log('token assigned')
         return done();
       });
 
@@ -187,6 +216,38 @@ describe('Delete Post', function () {
   this.timeout(3000)
   request(server)
     .delete('/api/post/'+postId)
+    .expect(200)
+    .set({'Authorization': `Bearer ${token}`})
+    .expect('Content-Type', /json/)
+    .end(function(err, res) {
+    
+      if (err) {
+        console.log(err)
+        return done(err);
+      }
+      console.log(res.body)
+      return done();
+    });
+
+  });
+});
+
+describe('Delete Post Account', function () {
+  var server;
+  beforeEach(function () {
+    
+    server = require('../../server.js');
+
+  });
+  afterEach(function () {
+    server.close();
+  });
+
+  it('responds to /api/account', function testSlash(done) {
+
+  this.timeout(3000)
+  request(server)
+    .delete('/api/account/')
     .expect(200)
     .set({'Authorization': `Bearer ${token}`})
     .expect('Content-Type', /json/)

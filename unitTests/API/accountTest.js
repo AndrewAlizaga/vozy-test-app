@@ -16,8 +16,8 @@ describe('Post User', function () {
 
   //Create Account
   it('responds to /api/account', function testSlash(done) {
-
-    this.timeout(3000)
+    console.log('post user test')
+    this.timeout(5000)
     request(server)
       .post('/api/account')
       .send({ 'name': 'Test User', 'password': 'qwerty' })
@@ -34,9 +34,11 @@ describe('Post User', function () {
 describe('Authenticate user', function (){
 
   var server;
+  
   beforeEach(function () {
 
     server = require('../../server.js');
+    //Get loged in
 
   });
   afterEach(function () {
@@ -47,7 +49,9 @@ describe('Authenticate user', function (){
   //Authenticate
   it('responds to /api/auth', function testSlash(done) {
 
-    this.timeout(3000)
+    console.log('Autheticating')
+
+    this.timeout(5000)
     request(server)
       .post('/api/auth')
       .auth('Test User', 'qwerty')
@@ -61,6 +65,7 @@ describe('Authenticate user', function (){
         }
 
         console.log(res.body)
+        console.log('token assigned')
         token = res.body.token;
         return done();
 
@@ -72,10 +77,11 @@ describe('Authenticate user', function (){
 describe('Update account', function (){
 
   var server;
-  beforeEach(function () {
+
+  beforeEach(async function () {
 
     server = require('../../server.js');
-
+  
   });
   afterEach(function () {
     server.close();
